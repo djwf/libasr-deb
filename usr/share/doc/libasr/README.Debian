@@ -1,0 +1,8 @@
+libasr for Debian
+--------------------
+
+Differences with libasr:
+
+	Adjustments to fit debian file structure.
+
+ -- David J. Weller-Fahy <dave@weller-fahy.com>  Sat, 19 Jul 2014 21:28:16 -0700
