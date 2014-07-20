@@ -34,14 +34,12 @@ install: install-bin
 install-bin: create-libasr-deb.sh
 	$(INSTALL) -d $(bindir)
 	$(INSTALL) $< $(bindir)
-	sed -e 's!%%packages%%!$(packages)!' $(bindir)/$< >$(bindir)/$<.new
-	sed -e 's!%%libasr%%!$(libasr)!' $(bindir)/$<.new >$(bindir)/$<
-	sed -e 's!%%sysconfdir%%!$(sysconfdir)!' $(bindir)/$< >$(bindir)/$<.new
-	sed -e 's!%%OFFICIAL%%!$(official)!' $(bindir)/$<.new >$(bindir)/$<
+	sed -i -e 's!%%packages%%!$(packages)!' $(bindir)/$<
+	sed -i -e 's!%%libasr%%!$(libasr)!' $(bindir)/$<
+	sed -i -e 's!%%sysconfdir%%!$(sysconfdir)!' $(bindir)/$<
 	$(INSTALL) -d $(sysconfsubdir)/usr/share/doc/libasr
 	$(INSTALL) -m 644 usr/share/doc/libasr/* \
 		$(sysconfsubdir)/usr/share/doc/libasr
-	$(RM) $(bindir)/$<.new
 	$(CHMOD) 755 $(bindir)/$<
 
 uninstall: uninstall-bin
