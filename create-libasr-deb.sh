@@ -69,7 +69,7 @@ env EDITOR="sed -i -r -e '/^(Vendor: |License: ).*$/d'" /usr/local/bin/fpm \
 		--category libs \
 		--url https://github.com/OpenSMTPD/libasr \
 		--description "libasr is a FREE asynchronous DNS resolver.
-This is a snapshot of the libasr git repository master branch: it is not stable
+This is a snapshot of the libasr git repository master branch: it is not stable 
 and should not be used unless you want any dependent software to break." \
 		.
 
