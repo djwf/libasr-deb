@@ -29,8 +29,6 @@ echo
 # Build everything.
 ./bootstrap
 ./configure --prefix=/usr \
-	--sysconfdir=/etc \
-	--libexecdir=/usr/lib/x86_64-linux-gnu \
 	CFLAGS="$(dpkg-buildflags --get CFLAGS)" \
 	CPPFLAGS="$(dpkg-buildflags --get CPPFLAGS)" \
 	CXXFLAGS="$(dpkg-buildflags --get CXXFLAGS)" \
